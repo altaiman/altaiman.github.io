@@ -13,7 +13,7 @@
 
 
         <!--[if (gt IE 9)|!(IE)]><!-->
-        <link href="static/css/mainvz7j5l5l8fr.min.css" rel="stylesheet" type="text/css">
+        <link href="static/css/maindjrekoi529.min.css" rel="stylesheet" type="text/css">
         <!--<![endif]-->
         <meta property="og:title" content="#{data.title}">
         <meta property="og:title" content="">
@@ -71,7 +71,7 @@
                                 <input class="request__field" type="text" placeholder="Введите ваше имя" />
                             </label>
                             <label class="request__label"> <span class="request__field-caption">Контактный телефон</span>
-                                <input class="request__field request__field_phone" type="tel" placeholder="+7 (___) ___-__-__" />
+                                <input class="request__field request__field_phone" type="tel" placeholder="Введите телефон" />
                             </label>
                             <button class="request__btn" type="submit">Отправить заявку
                             </button>
@@ -270,43 +270,40 @@
                         </h2>
                 <ul class="news__list">
                     <li class="news__item">
-                        <a class="news__link" href="news-item.html">
-                            <div class="news__pic">
-                                <img src="static/img/assets/news/news.jpg" alt="Иллюстрация" title="" />
-                            </div>
-                            <div class="news__date"> <span>18 фев</span>
-                            </div>
-                            <div class="news__info">
+                        <div class="news__pic">
+                            <img src="static/img/assets/news/news.jpg" alt="Иллюстрация" title="" />
+                        </div>
+                        <div class="news__date"> <span>18 фев</span>
+                        </div>
+                        <div class="news__info">
+                            <a class="news__link" href="news-item.html">
                                 <h3 class="news__caption">Открытие магазина в ТЦ «Москва» и скидки в честь этого события
-                                                                </h3><a class="news__link news__link_read" href="news-item.html">Далее</a>
-                            </div>
-                        </a>
+                                                                </h3><a class="news__link news__link_read" href="news-item.html">Далее</a></a>
+                        </div>
                     </li>
                     <li class="news__item">
-                        <a class="news__link" href="news-item.html">
-                            <div class="news__pic">
-                                <img src="static/img/assets/news/news.jpg" alt="Иллюстрация" title="" />
-                            </div>
-                            <div class="news__date"> <span>18 фев</span>
-                            </div>
-                            <div class="news__info">
+                        <div class="news__pic">
+                            <img src="static/img/assets/news/news.jpg" alt="Иллюстрация" title="" />
+                        </div>
+                        <div class="news__date"> <span>18 фев</span>
+                        </div>
+                        <div class="news__info">
+                            <a class="news__link" href="news-item.html">
                                 <h3 class="news__caption">Открытие магазина в ТЦ «Москва» и скидки в честь этого события
-                                                                </h3><a class="news__link news__link_read" href="news-item.html">Далее</a>
-                            </div>
-                        </a>
+                                                                </h3><a class="news__link news__link_read" href="news-item.html">Далее</a></a>
+                        </div>
                     </li>
                     <li class="news__item">
-                        <a class="news__link" href="news-item.html">
-                            <div class="news__pic">
-                                <img src="static/img/assets/news/news.jpg" alt="Иллюстрация" title="" />
-                            </div>
-                            <div class="news__date"> <span>18 фев</span>
-                            </div>
-                            <div class="news__info">
+                        <div class="news__pic">
+                            <img src="static/img/assets/news/news.jpg" alt="Иллюстрация" title="" />
+                        </div>
+                        <div class="news__date"> <span>18 фев</span>
+                        </div>
+                        <div class="news__info">
+                            <a class="news__link" href="news-item.html">
                                 <h3 class="news__caption">Открытие магазина в ТЦ «Москва» и скидки в честь этого события
-                                                                </h3><a class="news__link news__link_read" href="news-item.html">Далее</a>
-                            </div>
-                        </a>
+                                                                </h3><a class="news__link news__link_read" href="news-item.html">Далее</a></a>
+                        </div>
                     </li>
                 </ul>
                 <a class="news__link news__link_all section__link" href="news-list.html"> <span>Все новости</span>
@@ -404,9 +401,43 @@
                 </div>
             </div>
         </footer>
+        <div class="modal modal modal_message">
+            <button class="b-close">
+            </button>
+            <div class="modal__content">
+                <h3 class="modal__title">Ваша заявка успешно отправлена!
+                                </h3>
+                <p class="modal__text">Перезвоним вам в рабочее время с 9:00 до 18:00
+                </p>
+            </div>
+        </div>
+        <div class="modal modal modal_call">
+            <button class="b-close">
+            </button>
+            <div class="modal__content">
+                <h3 class="modal__title">Закажите обратный звонок!
+                                  </h3>
+                <form class="modal__modal-form modal-form">
+                    <label class="modal-form__label">
+                        <input class="modal-form__field" type="text" placeholder="Введите ваше имя" />
+                    </label>
+                    <label class="modal-form__label">
+                        <input class="modal-form__field" type="tel" placeholder="Введите ваш телефон" />
+                    </label>
+                    <label class="modal-form__label">
+                        <input class="modal-form__field" type="email" placeholder="Введите ваш e-mail" />
+                    </label>
+                    <label class="modal-form__label modal-form__label_text">
+                        <textarea class="modal-form__field modal-form__field_text" placeholder="Напишите ваше сообщение или вопрос"></textarea>
+                    </label>
+                    <button class="modal-form__btn" type="submit">Заказать звонок
+                    </button>
+                </form>
+            </div>
+        </div>
 
 
-        <script src="static/js/mainvz7j5l5l8fr.min.js"></script>
+        <script src="static/js/maindjrekoi529.min.js"></script>
     </body>
 
 </html>
