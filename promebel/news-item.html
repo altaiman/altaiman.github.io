@@ -26,6 +26,7 @@
         <meta property="twitter:description" content="">
         <link rel="image_src" href="">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script src="static/js/separate-js/libs.js"></script>
         <script>
             (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
         </script>
@@ -41,7 +42,7 @@
                     <ul class="menu__list">
                         <li class="menu__item"><a class="menu__link menu__link_active" href="index.html">Главная</a>
                         </li>
-                        <li class="menu__item"><a class="menu__link" href="#">Статьи</a>
+                        <li class="menu__item"><a class="menu__link" href="news-list.html">Статьи</a>
                         </li>
                         <li class="menu__item"><a class="menu__link" href="projects-list.html">Проекты</a>
                         </li>
@@ -127,6 +128,30 @@
                 </div>
             </div>
         </footer>
+        <div class="modal modal modal_call">
+            <button class="b-close">
+            </button>
+            <div class="modal__content">
+                <h3 class="modal__title">Закажите обратный звонок!
+                                    </h3>
+                <form class="modal__modal-form modal-form">
+                    <label class="modal-form__label">
+                        <input class="modal-form__field" type="text" placeholder="Введите ваше имя" />
+                    </label>
+                    <label class="modal-form__label">
+                        <input class="modal-form__field" type="tel" placeholder="Введите ваш телефон" />
+                    </label>
+                    <label class="modal-form__label">
+                        <input class="modal-form__field" type="email" placeholder="Введите ваш e-mail" />
+                    </label>
+                    <label class="modal-form__label modal-form__label_text">
+                        <textarea class="modal-form__field modal-form__field_text" placeholder="Напишите ваше сообщение или вопрос"></textarea>
+                    </label>
+                    <button class="modal-form__btn" type="submit">Заказать звонок
+                    </button>
+                </form>
+            </div>
+        </div>
 
 
         <script src="static/js/main.min.js"></script>

@@ -26,6 +26,7 @@
         <meta property="twitter:description" content="">
         <link rel="image_src" href="">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script src="static/js/separate-js/libs.js"></script>
         <script>
             (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
         </script>
@@ -42,7 +43,7 @@
                     <ul class="menu__list">
                         <li class="menu__item"><a class="menu__link menu__link_active" href="index.html">Главная</a>
                         </li>
-                        <li class="menu__item"><a class="menu__link" href="#">Статьи</a>
+                        <li class="menu__item"><a class="menu__link" href="news-list.html">Статьи</a>
                         </li>
                         <li class="menu__item"><a class="menu__link" href="projects-list.html">Проекты</a>
                         </li>
@@ -86,7 +87,7 @@
                         </h2>
                 <ul class="projects__list">
                     <li class="projects__item">
-                        <a class="projects__link projects__link_p" href="#">
+                        <a class="projects__link projects__link_p" href="projects-item.html">
                             <div class="projects__info">
                                 <div class="projects__info-content">
                                     <h3 class="projects__caption">Кухни из массива
@@ -99,7 +100,7 @@
                         </a>
                     </li>
                     <li class="projects__item projects__item_s">
-                        <a class="projects__link projects__link_p" href="#">
+                        <a class="projects__link projects__link_p" href="projects-item.html">
                             <div class="projects__info">
                                 <div class="projects__info-content">
                                     <h3 class="projects__caption">Мебель для детского сада
@@ -112,7 +113,7 @@
                         </a>
                     </li>
                     <li class="projects__item projects__item_s">
-                        <a class="projects__link projects__link_p" href="#">
+                        <a class="projects__link projects__link_p" href="projects-item.html">
                             <div class="projects__info">
                                 <div class="projects__info-content">
                                     <h3 class="projects__caption">Мебель для детского сада
@@ -125,7 +126,7 @@
                         </a>
                     </li>
                     <li class="projects__item">
-                        <a class="projects__link projects__link_p" href="#">
+                        <a class="projects__link projects__link_p" href="projects-item.html">
                             <div class="projects__info">
                                 <div class="projects__info-content">
                                     <h3 class="projects__caption">Кухни из массива
@@ -138,7 +139,7 @@
                         </a>
                     </li>
                     <li class="projects__item">
-                        <a class="projects__link projects__link_p" href="#">
+                        <a class="projects__link projects__link_p" href="projects-item.html">
                             <div class="projects__info">
                                 <div class="projects__info-content">
                                     <h3 class="projects__caption">Кухни из массива
@@ -151,7 +152,7 @@
                         </a>
                     </li>
                     <li class="projects__item projects__item_s">
-                        <a class="projects__link projects__link_p" href="#">
+                        <a class="projects__link projects__link_p" href="projects-item.html">
                             <div class="projects__info">
                                 <div class="projects__info-content">
                                     <h3 class="projects__caption">Мебель для детского сада
@@ -185,9 +186,9 @@
                                     </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
                                 </div>
                             </div>
-                            <div class="slider__pic-wrap">
+                            <a class="slider__pic-wrap" data-lightbox="review-1" href="static/img/assets/reviews/author.jpg">
                                 <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
-                            </div>
+                            </a>
                         </li>
                         <li class="slider__item">
                             <div class="slider__item-content">
@@ -198,9 +199,24 @@
                                     </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
                                 </div>
                             </div>
-                            <div class="slider__pic-wrap">
+                            <a class="slider__pic-wrap" data-lightbox="review-2" href="static/img/assets/reviews/author.jpg">
                                 <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="slider__item">
+                            <div class="slider__item-content">
+                                <div class="slider__info">
+                                    <p class="slider__text">
+                                        Заказывали у них кухню,очень понравилась! Обошли много магазинов везде разные цены на одну и туже кухню. В итоге нашли в интернете их сайт, позвонили, приехал замерщик все рассказал и показал. Цена заметно отличалась от магазина. Остались очень довольны.
+                                        Всем советую. Заказывали у них кухню,очень понравилась! Обошли много магазинов везде разные цены на одну и туже кухню. В итоге нашли в интернете их сайт, позвонили, приехал замерщик все рассказал и показал. Цена
+                                        заметно отличалась от магазина. Остались очень довольны. Всем советую. Заказывали у них кухню,очень понравилась! Обошли много магазинов везде разные цены на одну и туже кухню. В итоге нашли в интернете их сайт,
+                                        позвонили, приехал замерщик все рассказал и показал. Цена заметно отличалась от магазина. Остались очень довольны. Всем советую.
+                                    </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
+                                </div>
                             </div>
+                            <a class="slider__pic-wrap" data-lightbox="review-3" href="static/img/assets/reviews/author.jpg">
+                                <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
+                            </a>
                         </li>
                         <li class="slider__item">
                             <div class="slider__item-content">
@@ -211,9 +227,9 @@
                                     </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
                                 </div>
                             </div>
-                            <div class="slider__pic-wrap">
+                            <a class="slider__pic-wrap" data-lightbox="review-4" href="static/img/assets/reviews/author.jpg">
                                 <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
-                            </div>
+                            </a>
                         </li>
                         <li class="slider__item">
                             <div class="slider__item-content">
@@ -224,9 +240,9 @@
                                     </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
                                 </div>
                             </div>
-                            <div class="slider__pic-wrap">
+                            <a class="slider__pic-wrap" data-lightbox="review-5" href="static/img/assets/reviews/author.jpg">
                                 <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
-                            </div>
+                            </a>
                         </li>
                         <li class="slider__item">
                             <div class="slider__item-content">
@@ -237,9 +253,9 @@
                                     </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
                                 </div>
                             </div>
-                            <div class="slider__pic-wrap">
+                            <a class="slider__pic-wrap" data-lightbox="review-6" href="static/img/assets/reviews/author.jpg">
                                 <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
-                            </div>
+                            </a>
                         </li>
                         <li class="slider__item">
                             <div class="slider__item-content">
@@ -250,9 +266,22 @@
                                     </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
                                 </div>
                             </div>
-                            <div class="slider__pic-wrap">
+                            <a class="slider__pic-wrap" data-lightbox="review-7" href="static/img/assets/reviews/author.jpg">
                                 <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
+                            </a>
+                        </li>
+                        <li class="slider__item">
+                            <div class="slider__item-content">
+                                <div class="slider__info">
+                                    <p class="slider__text">
+                                        Заказывали у них кухню,очень понравилась! Обошли много магазинов везде разные цены на одну и туже кухню. В итоге нашли в интернете их сайт, позвонили, приехал замерщик все рассказал и показал. Цена заметно отличалась от магазина. Остались очень довольны.
+                                        Всем советую.
+                                    </p><span>Татьяна</span><a class="slider__link" href="#">Источник - Flamp.ru</a>
+                                </div>
                             </div>
+                            <a class="slider__pic-wrap" data-lightbox="review-8" href="static/img/assets/reviews/author.jpg">
+                                <img class="slider__pic" src="static/img/assets/reviews/author.jpg" alt="" role="presentation" />
+                            </a>
                         </li>
                     </ul>
                     <div class="slider__controls">
@@ -401,22 +430,12 @@
                 </div>
             </div>
         </footer>
-        <div class="modal modal modal_message">
-            <button class="b-close">
-            </button>
-            <div class="modal__content">
-                <h3 class="modal__title">Ваша заявка успешно отправлена!
-                                </h3>
-                <p class="modal__text">Перезвоним вам в рабочее время с 9:00 до 18:00
-                </p>
-            </div>
-        </div>
         <div class="modal modal modal_call">
             <button class="b-close">
             </button>
             <div class="modal__content">
                 <h3 class="modal__title">Закажите обратный звонок!
-                                  </h3>
+                                    </h3>
                 <form class="modal__modal-form modal-form">
                     <label class="modal-form__label">
                         <input class="modal-form__field" type="text" placeholder="Введите ваше имя" />
@@ -433,6 +452,16 @@
                     <button class="modal-form__btn" type="submit">Заказать звонок
                     </button>
                 </form>
+            </div>
+        </div>
+        <div class="modal modal modal_message">
+            <button class="b-close">
+            </button>
+            <div class="modal__content">
+                <h3 class="modal__title">Ваша заявка успешно отправлена!
+                                </h3>
+                <p class="modal__text">Перезвоним вам в рабочее время с 9:00 до 18:00
+                </p>
             </div>
         </div>
 
