@@ -210,6 +210,8 @@ $(function () {
     });
 
     $('.slider_reviews .slider__item').click(function () {
+        if ($(this).hasClass('slick-current')) return;
+
         slider.slick('slickGoTo', +$(this).index());
     });
 });
