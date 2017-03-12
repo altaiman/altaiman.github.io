@@ -9,9 +9,11 @@ $(function () {
                 controls: ['smallMapDefaultSet']
             });
 
-            placemark = new ymaps.Placemark([53.389951, 83.711453], { iconCaption: 'Pro Мебель'
-            }, {
-                preset: 'islands#redDotIconWithCaption'
+            placemark = new ymaps.Placemark([53.389951, 83.711453], { iconCaption: 'Pro Мебель' }, {
+                iconLayout: 'default#imageWithContent',
+                iconImageHref: 'static/img/general/marker.png',
+                iconImageSize: [30, 45],
+                iconImageOffset: [-3, -42]
             });
 
             map.geoObjects.add(placemark);
@@ -111,7 +113,8 @@ $(function () {
         slidesToScroll: 1,
         asNavFor: '.media__smallpics',
         arrows: false,
-        dots: false
+        dots: false,
+        fade: true
     });
 
     $('.media__smallpics').slick({
@@ -172,34 +175,43 @@ $(function () {
     checked();
     $('.filter__item-check').click(checked);
 });
-"use strict";
 'use strict';
 
-$('.slider_reviews .slider__list').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    initialSlide: 2,
-    variableWidth: true,
-    centerMode: true,
-    infinite: false,
-    speed: 1000,
-    prevArrow: $('.slider_reviews .slider__arrow_prev'),
-    nextArrow: $('.slider_reviews .slider__arrow_next'),
-    draggable: false
-});
+$(function () {
 
-$('.slider_reviews .slick-current').addClass('slider__item_active');
+    var slider = $('.slider_reviews .slider__list');
 
-var current = void 0;
+    slider.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 2,
+        variableWidth: true,
+        centerMode: true,
+        infinite: false,
+        speed: 1000,
+        prevArrow: $('.slider_reviews .slider__arrow_prev'),
+        nextArrow: $('.slider_reviews .slider__arrow_next'),
+        draggable: false
+    });
 
-$('.slider_reviews .slider__list').on('beforeChange', function (e, slick, currentSlide, nextSlide) {
-    current = $('.slider_reviews .slick-current');
-    $(current).find('.slider__item-content').css('opacity', 0);
-});
-
-$('.slider_reviews .slider__list').on('afterChange', function () {
-    $(current).removeClass('slider__item_active');
-    $(current).find('.slider__item-content').css('opacity', '');
     $('.slider_reviews .slick-current').addClass('slider__item_active');
+
+    var current = void 0;
+
+    slider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
+        current = $('.slider_reviews .slick-current');
+        $(current).find('.slider__item-content').css('opacity', 0);
+    });
+
+    slider.on('afterChange', function () {
+        $(current).removeClass('slider__item_active');
+        $(current).find('.slider__item-content').css('opacity', '');
+        $('.slider_reviews .slick-current').addClass('slider__item_active');
+    });
+
+    $('.slider_reviews .slider__item').click(function () {
+        slider.slick('slickGoTo', +$(this).index());
+    });
 });
+"use strict";
 "use strict";
