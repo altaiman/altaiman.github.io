@@ -1,29 +1,5 @@
 'use strict';
 
-$('.slider_achievements .slider__list').slick({
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    infinite: false,
-    prevArrow: $('.slider_achievements .slider__arrow_prev'),
-    nextArrow: $('.slider_achievements .slider__arrow_next'),
-    responsive: [{
-        breakpoint: 1000,
-        settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3
-        }
-    }, {
-        breakpoint: 760,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true
-        }
-    }]
-});
-'use strict';
-
 $(function () {
     if ($('#map').length !== 0 || $('#contacts-map').length !== 0) {
         var init = function init() {
@@ -50,6 +26,30 @@ $(function () {
         var map = void 0,
             placemark = void 0;
     }
+});
+'use strict';
+
+$('.slider_achievements .slider__list').slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    infinite: false,
+    prevArrow: $('.slider_achievements .slider__arrow_prev'),
+    nextArrow: $('.slider_achievements .slider__arrow_next'),
+    responsive: [{
+        breakpoint: 1000,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+        }
+    }, {
+        breakpoint: 760,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+        }
+    }]
 });
 "use strict";
 "use strict";
@@ -178,13 +178,47 @@ $(function () {
 
 $(function () {
 
+    // Функция проверки
+    function checked() {
+        $('.filter__item-check').each(function () {
+
+            if (this.checked) {
+                $('.project').hide();
+
+                $(this).parent().addClass('filter__item_active');
+
+                if ($(this).val() === 'all') {
+                    $('.project').show();
+                    return;
+                }
+
+                $('.project[data-project="' + $(this).val() + '"]').show();
+            } else {
+                $(this).parent().removeClass('filter__item_active');
+            }
+        });
+    }
+
+    checked();
+    $('.filter__item-check').click(checked);
+});
+'use strict';
+
+$(function () {
+
     $('.media__slider_news').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.media__smallpics',
         arrows: false,
         dots: false,
-        fade: true
+        fade: true,
+        responsive: [{
+            breakpoint: 760,
+            settings: {
+                dots: true
+            }
+        }]
     });
 
     $('.media__smallpics').slick({
@@ -216,34 +250,35 @@ $(function () {
 
     checked();
     $('.tab__radio').click(checked);
-});
-'use strict';
 
-$(function () {
+    $('.projects-item__show').on('click', function () {
+        $(this).toggleClass('projects-item__show_active');
+        $(this).next().finish().slideToggle();
+    });
 
-    // Функция проверки
-    function checked() {
-        $('.filter__item-check').each(function () {
+    slider();
+    $(window).resize(slider);
 
-            if (this.checked) {
-                $('.project').hide();
-
-                $(this).parent().addClass('filter__item_active');
-
-                if ($(this).val() === 'all') {
-                    $('.project').show();
-                    return;
-                }
-
-                $('.project[data-project="' + $(this).val() + '"]').show();
-            } else {
-                $(this).parent().removeClass('filter__item_active');
-            }
-        });
+    function slider() {
+        if ($(window).width() < 760) {
+            try {
+                $('.projects-item__similar').slick({
+                    slidesToShow: 1,
+                    infinite: false,
+                    arrows: false,
+                    dots: true,
+                    responsive: [{
+                        breakpoint: 760,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }]
+                });
+            } catch (e) {}
+        } else if ($('.news.section .news__list').hasClass('slick-slider')) {
+            $('.news.section .news__list').slick('unslick');
+        }
     }
-
-    checked();
-    $('.filter__item-check').click(checked);
 });
 'use strict';
 
