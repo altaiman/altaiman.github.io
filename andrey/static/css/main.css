@@ -382,16 +382,6 @@ body {
 .page {
   font-family: "CenturyGothic", sans-serif;
   background-color: #f4f7f9;
-  min-width: 1800px;
-}
-.page__content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
 }
 .page__wrapper {
   min-height: 100%;
@@ -424,6 +414,9 @@ button:focus {
   background: none;
   border: none;
 }
+.home-btn:hover {
+  color: #ea053b;
+}
 .speaker {
   position: absolute;
   right: 25px;
@@ -441,6 +434,21 @@ button:focus {
 }
 .speaker-btn.off .icon__speaker {
   display: none;
+}
+.main {
+  margin: 200px auto 0 auto;
+  width: 80%;
+}
+.main::after {
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  content: '';
+}
+@media (max-width: 1700px) {
+  .main {
+    width: 95%;
+  }
 }
 @media (max-width: 760px) {
   .page {
@@ -462,12 +470,40 @@ button:focus {
     right: 5px;
   }
 }
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .counter {
-  position: absolute;
-  top: 200px;
-  right: 157px;
-  width: 620px;
+  width: 45%;
+  max-width: 620px;
   text-align: right;
+  display: inline-block;
+  vertical-align: top;
+  float: right;
 }
 .counter-day {
   font-size: 367px;
@@ -510,12 +546,32 @@ button:focus {
   color: #e3e3e3;
   text-align: center;
 }
-@media (max-width: 760px) {
+@media (max-width: 1500px) {
+  .counter-day {
+    font-size: 300px;
+  }
   .counter {
+    width: 40%;
+  }
+}
+@media (max-width: 1300px) {
+  .counter-day {
+    font-size: 222px;
+  }
+  .counter-message {
+    font-size: 62px;
+  }
+}
+@media (max-width: 1000px) {
+  .counter {
+    display: block;
     position: static;
     width: 80%;
     margin: 0 auto;
+    float: none;
   }
+}
+@media (max-width: 760px) {
   .counter-day {
     font-size: 64px;
   }
@@ -524,10 +580,11 @@ button:focus {
   }
 }
 .quotes {
-  position: absolute;
-  top: 200px;
-  left: 248px;
-  width: 700px;
+  width: 50%;
+  max-width: 700px;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
 }
 .quotes-title {
   font-size: 27px;
@@ -564,19 +621,20 @@ button:focus {
   background-size: 41px, 37px;
   background-repeat: no-repeat;
 }
-.quotes-body p {
+.quotes-body span {
   font-size: 30px;
   font-weight: bold;
 }
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
   .quotes {
+    display: block;
+    float: none;
     position: static;
     padding: 5px;
     width: auto;
+    max-width: 80%;
+    margin: 0 auto;
     box-sizing: border-box;
-  }
-  .quotes-title {
-    font-size: 21px;
   }
   .quotes-body {
     margin: 0;
@@ -586,7 +644,15 @@ button:focus {
   .quotes-body::after {
     display: none;
   }
-  .quotes-body p {
+}
+@media (max-width: 760px) {
+  .quotes {
+    max-width: 100%;
+  }
+  .quotes-title {
+    font-size: 21px;
+  }
+  .quotes-body span {
     font-size: 18px;
   }
 }
